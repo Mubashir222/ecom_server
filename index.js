@@ -16,7 +16,8 @@ const bodyParser = require('body-parser');
 const app = express();
 dotenv.config();
 app.use(cors({
-    origin: [process.env.NEXT_PUBLIC_FRONTEND_URL],
+    // origin: [process.env.NEXT_PUBLIC_FRONTEND_URL],
+    origin: true,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
 }));
