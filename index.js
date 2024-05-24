@@ -38,6 +38,6 @@ app.use('/multi-files', MultiFiles);
 app.use('/dropdown', Dropdown)
 app.use('/dropdown-nested-option', DropdownNestedOption)
 
-app.listen(process.env.NEXT_PUBLIC_PORT, () => {
-    console.log(`Server is running on ${process.env.NEXT_PUBLIC_PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on ${process.env.PORT}`);
 });

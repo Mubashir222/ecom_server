@@ -4,8 +4,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const DbConnect = () => {
-    mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URI, {
-        dbName: process.env.NEXT_PUBLIC_DB_NAME,
+    mongoose.connect(process.env.MONGO_URI, {
+        dbName: process.env.DB_NAME,
     }).then(() => {
         console.log('Connected to MongoDB');
     }
