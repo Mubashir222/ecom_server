@@ -16,7 +16,7 @@ const bodyParser = require('body-parser');
 const app = express();
 dotenv.config();
 app.use(cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: [process.env.NEXT_PUBLIC_FRONTEND_URL],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
 }));
@@ -38,6 +38,6 @@ app.use('/multi-files', MultiFiles);
 app.use('/dropdown', Dropdown)
 app.use('/dropdown-nested-option', DropdownNestedOption)
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on ${process.env.PORT}`);
+app.listen(process.env.NEXT_PUBLIC_PORT, () => {
+    console.log(`Server is running on ${process.env.NEXT_PUBLIC_PORT}`);
 });
